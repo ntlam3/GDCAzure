@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title> THIS IS THE TITLE!</title>
+</head>
+<body>
+<h1>Hello!</h1>
+<p><strong>Welcome to the site {{my_variable}}</strong></p>
+<h1>{{letters}}</h1>
+<h1>Puppy name: {{pup_dict['pup_name']}}</h1>
+<ul>
+    {% for item in letters %}
+    <li>{{item}}</li>
+    {%endfor%}
+</ul>
+{% if 5 in myarray %}
+<p>Found 5!</p>
+{% else %}
+<p>Hmm. Cannot find it!</p>
+{% endif %}
+<img src="../static/tetiana.jpg" alt="Item not found">
+</body>
+</html>
