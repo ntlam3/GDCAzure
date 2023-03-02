@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{% block content %}
+<span class="placeholder col-12 bg-success"><h3><strong>CRM-EU</strong></h3></span>  
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Count</th>
+            </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Azure Virtual machine</th>
+            <td>{{crmeu['count_vm']}}</td> 
+        </tr>
+        <tr>
+          <th scope="row">Azure disks</th>
+          <td>{{crmeu['count_disk']}}</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Unused Azure disks</th>
+          <td>{{crmeu['unused_disk']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Unused Load Balancer</th>
+            <td>{{crmeu['unused_lb']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Unused Public IP Addresses</th>
+            <td>{{crmeu['unused_ip']}}</td>
+        </tr>   
+        
+        
+    </tbody>
+</table>
+
+<span class="placeholder col-12 bg-success"><h3><strong>CRM-CIS-DEV-QA</strong></h3></span>  
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Count</th>
+            </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Azure Virtual machine</th>
+            <td>{{crmcisdev['count_vm']}}</td> 
+        </tr>
+        <tr>
+          <th scope="row">Azure disks</th>
+          <td>{{crmcisdev['count_disk']}}</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Unused Azure disks</th>
+          <td>{{crmcisdev['unused_disk']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Unused Load Balancer</th>
+            <td>{{crmcisdev['unused_lb']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Unused Public IP Addresses</th>
+            <td>{{crmcisdev['unused_ip']}}</td>
+        </tr>   
+        
+        
+    </tbody>
+</table>
+<span class="placeholder col-12 bg-success"><h3><strong>CRM-CIS-PRD</strong></h3></span>  
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Count</th>
+            </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Azure Virtual machine</th>
+            <td>{{crmcisprd['count_vm']}}</td> 
+        </tr>
+        <tr>
+          <th scope="row">Azure disks</th>
+          <td>{{crmcisprd['count_disk']}}</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Unused Azure disks</th>
+          <td>{{crmcisprd['unused_disk']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Unused Load Balancer</th>
+            <td>{{crmcisprd['unused_lb']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Unused Public IP Addresses</th>
+            <td>{{crmcisprd['unused_ip']}}</td>
+        </tr>   
+        
+        
+    </tbody>
+</table>
+<span class="placeholder col-12 bg-success"><h3><strong>CRM-LATAM</strong></h3></span>  
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Count</th>
+            </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Azure Virtual machine</th>
+            <td>{{crmlatam['count_vm']}}</td> 
+        </tr>
+        <tr>
+          <th scope="row">Azure disks</th>
+          <td>{{crmlatam['count_disk']}}</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Unused Azure disks</th>
+          <td>{{crmlatam['unused_disk']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Unused Load Balancer</th>
+            <td>{{crmlatam['unused_lb']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Unused Public IP Addresses</th>
+            <td>{{crmlatam['unused_ip']}}</td>
+        </tr>   
+        
+        
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,263 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Download the report (.xlsx)</h3>
+<a href="https://gdcazure.org/{{file_name}}" download>
+    <img src="..//static/download.png" width="50" height="50" alt="Unable to load the image">
+</a>  
+<br>
+<br>
+<span class="placeholder col-12 bg-success"><h3><strong>EU-PROMOTION</strong></h3></span>  
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Severity level</th>
+        <th scope="col">Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <th scope="row">Disaster</th>
+          <td>{{mydict['eu_disaster']}}</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">High</th>
+          <td>{{mydict['eu_high']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Average</th>
+            <td>{{mydict['eu_average']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Warning</th>
+            <td>{{mydict['eu_warning']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Information</th>
+            <td>{{mydict['eu_information']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Total</th>
+            <td>{{mydict['total_eu']}}</td>
+          </tr>
+    </tbody>
+</table>
+<span class="placeholder col-12 bg-success"><h3><strong>CRM</strong></h3></span>  
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Severity level</th>
+        <th scope="col">Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <th scope="row">Disaster</th>
+          <td>{{mydict['crm_disaster']}}</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">High</th>
+          <td>{{mydict['crm_high']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Average</th>
+            <td>{{mydict['crm_average']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Warning</th>
+            <td>{{mydict['crm_warning']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Information</th>
+            <td>{{mydict['crm_information']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Total</th>
+            <td>{{mydict['total_crm']}}</td>
+          </tr>
+    </tbody>
+</table>
+<span class="placeholder col-12 bg-success"><h3><strong>CRM Analytics</strong></h3></span>  
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Severity level</th>
+        <th scope="col">Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <th scope="row">Disaster</th>
+          <td>{{mydict['ana_disaster']}}</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">High</th>
+          <td>{{mydict['ana_high']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Average</th>
+            <td>{{mydict['ana_average']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Warning</th>
+            <td>{{mydict['ana_warning']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Information</th>
+            <td>{{mydict['ana_information']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Total</th>
+            <td>{{mydict['total_ana']}}</td>
+          </tr>
+    </tbody>
+</table>
+<span class="placeholder col-12 bg-success"><h3><strong>GDC India</strong></h3></span>  
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Severity level</th>
+        <th scope="col">Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <th scope="row">Disaster</th>
+          <td>{{mydict['gdc_disaster']}}</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">High</th>
+          <td>{{mydict['gdc_high']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Average</th>
+            <td>{{mydict['gdc_average']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Warning</th>
+            <td>{{mydict['gdc_warning']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Information</th>
+            <td>{{mydict['gdc_information']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Total</th>
+            <td>{{mydict['total_gdc']}}</td>
+          </tr>
+    </tbody>
+</table>
+<span class="placeholder col-12 bg-success"><h3><strong>KCDM</strong></h3></span>  
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Severity level</th>
+        <th scope="col">Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <th scope="row">Disaster</th>
+          <td>{{mydict['kcdm_disaster']}}</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">High</th>
+          <td>{{mydict['kcdm_high']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Average</th>
+            <td>{{mydict['kcdm_average']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Warning</th>
+            <td>{{mydict['kcdm_warning']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Information</th>
+            <td>{{mydict['kcdm_information']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Total</th>
+            <td>{{mydict['total_kcdm']}}</td>
+          </tr>
+    </tbody>
+</table>
+<span class="placeholder col-12 bg-success"><h3><strong>MENA</strong></h3></span>  
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Severity level</th>
+        <th scope="col">Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <th scope="row">Disaster</th>
+          <td>{{mydict['mena_disaster']}}</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">High</th>
+          <td>{{mydict['mena_high']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Average</th>
+            <td>{{mydict['mena_average']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Warning</th>
+            <td>{{mydict['mena_warning']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Information</th>
+            <td>{{mydict['mena_information']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Total</th>
+            <td>{{mydict['total_mena']}}</td>
+          </tr>
+    </tbody>
+</table>
+<span class="placeholder col-12 bg-success"><h3><strong>GRS</strong></h3></span>  
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Severity level</th>
+        <th scope="col">Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <th scope="row">Disaster</th>
+          <td>{{mydict['grs_disaster']}}</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">High</th>
+          <td>{{mydict['grs_high']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Average</th>
+            <td>{{mydict['grs_average']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Warning</th>
+            <td>{{mydict['grs_warning']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Information</th>
+            <td>{{mydict['grs_information']}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Total</th>
+            <td>{{mydict['total_grs']}}</td>
+          </tr>
+    </tbody>
+</table>
+
+{% endblock %}

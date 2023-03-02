@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+    
+	<div class="container">
+	 <div class="row align-items-start">
+		<div class="col">
+			<h3>S12_AP_CPU</h3>
+			<img src="../static/{{kcdm_folder}}/s12_ap_cpu.jpg" alt="Image not found">
+		</div>
+		<div class="col">
+			<h3>S12_AP_MEM</h3>
+			<img src="../static/{{kcdm_folder}}/s12_ap_mem.jpg" alt="Image not found">
+		</div>
+		<div class="col">
+			<h3>S13_DB_CPU</h3>
+			<img src="../static/{{kcdm_folder}}/s13_db_cpu.jpg" alt="Image not found">
+		</div>
+		<div class="col">
+			<h3>S13_DB_PAGE</h3>
+			<img src="../static/{{kcdm_folder}}/s13_db_page.jpg" alt="Image not found">		
+		</div>
+		<div class="col">
+			<h3>S14_AP_CPU</h3>
+			<img src="../static/{{kcdm_folder}}/s14_ap_cpu.jpg" alt="Image not found">		
+		</div>
+		<div class="col">
+			<h3>S14_AP_MEM</h3>
+			<img src="../static/{{kcdm_folder}}/s14_ap_mem.jpg" alt="Image not found">
+		</div>
+	    <div class="col">
+		<h3>KCDM_CM_DB_CPU</h3>
+		    {% for i in range (0,length) %}
+		        <img src="../static/{{kcdm_dynamic_folder}}/cm_db_cpu_{{i}}.jpg" alt="Image not found"><br><br>
+		    {% endfor %}      		
+	    </div>
+	    <div class="col">
+      		<h3>KCDM_CM_DATA_DISK</h3>
+		    {% for i in range (0,length) %}
+		        <img src="../static/{{kcdm_dynamic_folder}}/cm_data_disk_{{i}}.jpg" alt="Image not found"><br><br>
+		    {% endfor %}
+	    </div>
+	    
+	 </div>
+	<div class="row align-items-end">
+	    <div class="col">
+      		 <h3>KCDM_CM_DB_PAGE_LIFE_EXPECTANCY</h3>
+		    {% for i in range (0,length) %}
+		        <img src="../static/{{kcdm_dynamic_folder}}/cm_db_page_{{i}}.jpg" alt="Image not found"><br><br>
+		    {% endfor %}
+	    </div>
+	    <div class="col">
+      	    	<h3>KCDM_CM_DB_LOG_BACKUP_DISK</h3>
+		    {% for i in range (0,length) %}
+		        <img src="../static/{{kcdm_dynamic_folder}}/cm_db_log_{{i}}.jpg" alt="Image not found"><br><br>
+		    {% endfor %}	    
+    	      </div>
+	</div>
+
+	</div>
+{% endblock %}
