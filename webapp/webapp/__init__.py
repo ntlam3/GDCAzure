@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from distutils.log import debug
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
+from flask_dance.contrib.azure import make_azure_blueprint, azure
 #import sys
 #sys.path.insert(0,'/var/www/webapp/webapp')
 #from requests import session
@@ -22,10 +23,23 @@ kcdm_folder=MainProcessor.KCDM(my_se)
 kcdm_dynamic_folder=MainProcessor.kcdm_dynamic(my_se)
 length=len(URL.get_cm_db_cpu())
 crm_folder=MainProcessor.crm(my_se)
+
+app.secret_key = "supersekrit"
+blueprint = make_azure_blueprint(
+    client_id="468b52ff-4da0-4bda-b933-728b6d8b07b8",
+    client_secret="9db8Q~uMDPBPGCcHVqRKjzhyrgAsrXe5OqwnWa9_",
+)
+app.register_blueprint(blueprint, url_prefix="/login")
+
 @app.route('/')
 def index():
 	#test.hello()
-	return render_template('home.html')
+    if not azure.authorized:
+        return redirect(url_for("azure.login"))
+    resp = azure.get("/v1.0/me")
+    assert resp.ok
+    return render_template('home.html')
+    #return "You are {mail} on Azure AD".format(mail=resp.json()["mail"])
 
 @app.route('/eupromo')
 def eupromo():
