@@ -27,7 +27,7 @@ crm_folder=MainProcessor.crm(my_se)
 app.secret_key = "supersekrit"
 blueprint = make_azure_blueprint(
     client_id="468b52ff-4da0-4bda-b933-728b6d8b07b8",
-    client_secret="9db8Q~uMDPBPGCcHVqRKjzhyrgAsrXe5OqwnWa9_",
+    client_secret="0Ud8Q~C6ycgfUdwJDr1exhRCN~e8L-Crm_QzecwM",
 )
 app.register_blueprint(blueprint, url_prefix="/login")
 
